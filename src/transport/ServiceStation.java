@@ -1,6 +1,15 @@
 package transport;
 
 public class ServiceStation {
+    public void check(Bicycle bicycle) {
+        if (bicycle != null) {
+            System.out.println("Обслуживаем " + bicycle.modelName);
+            for (int i = 0; i < bicycle.wheelsCount; i++) {
+                bicycle.updateTyre();
+            }
+        }
+    }
+
     public void check(Car car) {
         if (car != null) {
             System.out.println("Обслуживаем " + car.modelName);
@@ -19,15 +28,6 @@ public class ServiceStation {
             }
             truck.checkEngine();
             truck.checkTrailer();
-        }
-    }
-
-    public void check(Bicycle bicycle) {
-        if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.modelName);
-            for (int i = 0; i < bicycle.wheelsCount; i++) {
-                bicycle.updateTyre();
-            }
         }
     }
 }
